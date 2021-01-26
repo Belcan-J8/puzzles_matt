@@ -3,6 +3,7 @@
 Car::Car()
 	: logger(new Logger())
 {
+	logger = GetColorLogger(ColorCode::Blue);
 }
 void Car::TurnLeft()
 {

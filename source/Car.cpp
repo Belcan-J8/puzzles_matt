@@ -3,20 +3,21 @@
 Car::Car()
 	: logger(new Logger())
 {
+	logger = GetColorLogger(ColorCode::Blue);
 }
 void Car::TurnLeft()
 {
-	logger->Log("Turning left", ColorCode::Blue);
+	logger->Log("Turning left");
 	fuelGauge.DecrementFuelLevel();
 }
 void Car::TurnRight()
 {
-	logger->Log("Turning right", ColorCode::Blue);
+	logger->Log("Turning right");
 	fuelGauge.DecrementFuelLevel();
 }
 void Car::Accelerate()
 {
-	logger->Log("Moving ahead", ColorCode::Blue);
+	logger->Log("Moving ahead");
 	fuelGauge.DecrementFuelLevel();
 	fuelGauge.DecrementFuelLevel();
 }

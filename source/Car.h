@@ -12,5 +12,5 @@ public:
 	void Accelerate();
 private:
 	FuelGauge fuelGauge;
-	Logger* logger;
+	ILogger* logger;
 };

@@ -22,8 +22,19 @@ enum class ColorCode
 class Logger : public ILogger
 {
 public:
-
 	void Log(std::string string);
-	void Log(std::string string, ColorCode rgb);
 };
 
+class BlueLogger : public ILogger
+{
+public:
+	void Log(std::string string);
+};
+
+class RedLogger : public ILogger
+{
+public:
+	void Log(std::string string);
+};
+
+ILogger* GetColorLogger(ColorCode color);

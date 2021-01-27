@@ -8,13 +8,17 @@ void Logger::Log(std::string string)
 	std::cout << termcolor::reset << string << std::endl;
 }
 
-void BlueLogger::Log(std::string string)
+void YellowLogger::Log(std::string string)
 {
-	std::cout << termcolor::blue << string << std::endl;
+	std::cout << termcolor::yellow << string << std::endl;
 }
-void RedLogger::Log(std::string string)
+void CyanLogger::Log(std::string string)
 {
-	std::cout << termcolor::red << string << std::endl;
+	std::cout << termcolor::cyan << string << std::endl;
+}
+void MagentaLogger::Log(std::string string)
+{
+	std::cout << termcolor::magenta << string << std::endl;
 }
 ILogger* GetColorLogger(ColorCode color)
 {
@@ -25,26 +29,27 @@ ILogger* GetColorLogger(ColorCode color)
 		returnColor = new Logger();
 		break;
 	case ColorCode::Red:
-		returnColor = new RedLogger();
+		returnColor = new Logger();
 		break;
 	case ColorCode::Green:
 		returnColor = new Logger();
 		break;
 	case ColorCode::Yellow:
-		returnColor = new Logger();
+		returnColor = new YellowLogger();
 		break;
 	case ColorCode::Blue:
-		returnColor = new BlueLogger();
+		returnColor = new Logger();
 		break;
 	case ColorCode::Magenta:
-		returnColor = new Logger();
+		returnColor = new MagentaLogger();
 		break;
 	case ColorCode::Cyan:
-		returnColor = new Logger();
+		returnColor = new CyanLogger();
 		break;
 	case ColorCode::White:
 		returnColor = new Logger();
 		break;
+	case ColorCode::Black:
 	default:
 		returnColor = new Logger();
 	}

@@ -3,7 +3,7 @@
 FuelGauge::FuelGauge()
 	: fuelLevel(5)
 {
-	logger = GetColorLogger(ColorCode::Red);
+	logger = GetColorLogger(ColorCode::Yellow);
 }
 void FuelGauge::DecrementFuelLevel()
 {

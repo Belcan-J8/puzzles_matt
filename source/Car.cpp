@@ -1,9 +1,21 @@
 #include "Car.h"
 
-Car::Car()
+Car::Car(int carId)
 	: logger(new Logger())
 {
-	logger = GetColorLogger(ColorCode::Blue);
+	if (carId == 1)
+	{
+		logger = GetColorLogger(ColorCode::Cyan);
+	}
+	else if (carId == 2)
+	{
+		logger = GetColorLogger(ColorCode::Magenta);
+	}
+	else
+	{
+		logger = GetColorLogger(ColorCode::Black);
+	}
+	
 }
 void Car::TurnLeft()
 {

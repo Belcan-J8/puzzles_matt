@@ -6,7 +6,7 @@
 class Car
 {
 public:
-	Car();
+	Car(int carId);
 	void TurnLeft();
 	void TurnRight();
 	void Accelerate();
